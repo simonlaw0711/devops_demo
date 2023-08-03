@@ -16,7 +16,9 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build Docker image
-      run: docker build -f log_analytics/Dockerfile -t log-analytics .
+      run: docker build -f Dockerfile -t log-analytics .
+      working-directory: log_analytics
 
     - name: Run Docker image
       run: docker run --rm log-analytics
+      working-directory: log_analytics
