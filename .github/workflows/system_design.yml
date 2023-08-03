@@ -19,9 +19,19 @@ jobs:
         docker-compose -f docker-compose.yml up -d
         # Run curl commands to test the app
         sleep 10 # wait for services to start
+
         response=$(curl -s -X POST http://127.0.0.1:8080/newurl -H "Content-Type: application/json" -d '{"url": "https://www.youtube.com"}')
         shortenUri=$(echo $response | jq -r '.shortenUri')
         echo $shortenUri
-        curl -X GET $shortenUri -I -L
+
+        # Get HTTP status code
+        http_status=$(curl -s -X GET $shortenUri -I -L -o /dev/null -w '%{http_code}')
+        echo "HTTP Status Code: $http_status"
+
+        # Check if HTTP status code is 200
+        if [ $http_status -ne 200 ]; then
+            echo "HTTP request failed with status code $http_status"
+            exit 1
+        fi
       working-directory: system_design
 
