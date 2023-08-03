@@ -5,6 +5,7 @@ on:
     paths:
     - 'system_design/**'
     branches: [ main ]
+  workflow_dispatch: 
 
 jobs:
   test:
@@ -34,4 +35,3 @@ jobs:
             exit 1
         fi
       working-directory: system_design
-
