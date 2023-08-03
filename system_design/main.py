@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import RedirectResponse
+from starlette.status import HTTP_302_FOUND
 import string
 import random
 from pydantic import BaseModel
@@ -38,4 +39,4 @@ async def redirect_url(shortened_url: str):
     if url is None:
         raise HTTPException(status_code=404, detail="URL not found")
     else:
-        return RedirectResponse(url=url.decode())
+        return RedirectResponse(url=url.decode(), status_code=HTTP_302_FOUND)
