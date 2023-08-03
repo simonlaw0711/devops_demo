@@ -63,6 +63,6 @@ curl -X POST http://127.0.0.1:8080/newurl -H "Content-Type: application/json" -d
 GET /{shorten_url}
 
 ```shell
-curl -X GET http://localhost:8080/{shorten_url} -v -I 
+curl -X GET http://localhost:8080/{shorten_url} -v -I
 ```
 
