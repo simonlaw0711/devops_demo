@@ -60,9 +60,9 @@ POST /newurl
 curl -X POST http://127.0.0.1:8080/newurl -H "Content-Type: application/json" -d '{"url": "https://www.youtube.com"}'
 ```
 
-GET /{shorten_url}
+GET /{shorten_id}
 
 ```shell
-curl -X GET http://localhost:8080/{shorten_url} -v -I 
+curl -X GET http://localhost:8080/{shorten_id} -v -I -L
 ```
 

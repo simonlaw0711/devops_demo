@@ -22,6 +22,6 @@ jobs:
         response=$(curl -s -X POST http://127.0.0.1:8080/newurl -H "Content-Type: application/json" -d '{"url": "https://www.youtube.com"}')
         shortenUri=$(echo $response | jq -r '.shortenUri')
         echo $shortenUri
-        curl $shortenUri -v -I -L
+        curl $shortenUri -I -L
       working-directory: system_design
 
