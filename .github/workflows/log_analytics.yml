@@ -1,16 +1,14 @@
-name: Docker
+name: Docker for Log Analytics
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
+    paths:
+    - 'log_analytics/**'
     branches: [ main ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - name: Check out code
       uses: actions/checkout@v2
