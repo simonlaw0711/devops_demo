@@ -40,6 +40,7 @@ docker compose up
 ## HA Deployment
 
 Here i will use minikube to simulate production Kubernetes Setup to support High availability:
+*Please install Minikube before you run the script!!!*
 
 ### How to Use:
 
