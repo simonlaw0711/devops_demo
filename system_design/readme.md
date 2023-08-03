@@ -10,7 +10,7 @@ docker compose up
    
    **Result**
    
-   ![image-20230803144153984](lololololol/system_design/imgs/system1.jpg)
+   ![image-20230803144153984](system_design/imgs/system1.jpg)
 
 2. **Test URL Shortening with already shortened URL**
    
@@ -19,7 +19,7 @@ docker compose up
    
    **Result**
    
-   ![image-20230803144519297](lololololol/system_design/imgs/system2.jpg)
+   ![image-20230803144519297](system_design/imgs/system2.jpg)
 
 3. Test URL Redirection
    - Input: POST to /newurl with payload: {"url": "https://www.example.com"}
@@ -27,7 +27,7 @@ docker compose up
    
    **Result**
    
-   ![system3](lololololol/system_design/imgs/system3.jpg)
+   ![system3](system_design/imgs/system3.jpg)
 
 4. Test Non-Existent Shortened URL
    - Input: GET to /{shortened_url} where shortened_url is a non-existent 9-character random string.
@@ -35,7 +35,7 @@ docker compose up
    
    **Result**
    
-   ![system4](lololololol/system_design/imgs/system4.jpg)
+   ![system4](system_design/imgs/system4.jpg)
 
 ## HA Deployment
 
