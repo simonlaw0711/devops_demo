@@ -1,7 +1,3 @@
-## Architecture Diagram
-
-![system5](imgs/system5.jpg)
-
 ## How to Use?
 
 ```shell
