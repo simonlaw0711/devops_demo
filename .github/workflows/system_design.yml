@@ -17,7 +17,7 @@ jobs:
 
     - name: Set up Docker Compose
       run: |
-        docker-compose -f docker-compose.yml up -d
+        docker compose -f docker-compose.yml up -d
         # Run curl commands to test the app
         sleep 10 # wait for services to start
 
